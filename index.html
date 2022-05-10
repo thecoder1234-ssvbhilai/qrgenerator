@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap";
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: poppins, sans-serif;
+        }
+        .wrapper.active{
+            height: 530px;
+        }
+        .wrapper.active .qr-code{
+            opacity: 1;
+            pointer-events: auto;
+            transition: opacity 0.5s 0.05s ease;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-[100vh] bg-[#3498DB] overflow-hidden">
+    <div class="wrapper bg-[#fff] max-w-[410px] rounded-[7px] h-[260px]" style="padding: 16px 25px; transition: height 0.2s ease;">
+        <header>
+            <h1 class="text-[21px] font-[500]">QR Code Generator</h1>
+            <p class="mt-[5px] text-[16px] text-[#474747]">Paste a url or enter text to create QR code</p>
+        </header>
+        <div class="form" style="margin: 20px 0 25px;">
+            <input class="w-[100%] h-[55px] border-none outline-none rounded-[5px] text-[18px]" style="border: 1px solid #999; padding: 0 17px;" type="text" placeholder="Enter text or url">
+            <button class="w-[100%] h-[55px] border-none outline-none rounded-[5px] text-[#fff] cursor-pointer mt-[20px] text-[17px] bg-[#3498DB]">Generate QR Code</button>
+        </div>
+        <div class="qr-code flex opacity-0 pointer-events-none rounded-[5px] items-center justify-center" style="border: 1px solid #ccc; padding: 33px 0;">
+            <img src="" alt="qr-code">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
